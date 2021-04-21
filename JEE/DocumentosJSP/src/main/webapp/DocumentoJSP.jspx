@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+
+ <!--USO DECLARACIONES -->
+ <jsp:declaration>
+     
+private int contadorVisitas=1;
+ </jsp:declaration>
+ <html>
+ <body>
+ <h1>EJEMPLO SALIDA DE TEXTO</h1>
+ <jsp:text>saludos desde un documento JSPX</jsp:text>
+ <!-- expresiones con JSPX-->
+ <br/>
+ <jsp:expression>2*3</jsp:expression>
+ <!--EJEMPLO DE SCRIPTLE -->
+ <jsp:scriptlet>
+     
+String nombreAplicacion=request.getContextPath();
+ </jsp:scriptlet>
+ Nombre de la aplicacion: <jsp:expression>nombreAplicacion</jsp:expression>
+ <br/>
+ Contador de visitas:
+ <jsp:expression>this.contadorVisitas++</jsp:expression>
+ </body>
+ </html>
+ 
+</jsp:root>
